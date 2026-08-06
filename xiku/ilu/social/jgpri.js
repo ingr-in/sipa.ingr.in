@@ -1,8 +1,6 @@
-// socialRenderer.js - Render social links
-
+// socialRenderer.js - Fixed version
 import { SOCIAL_CONFIG } from 'https://www.sipa.ingr.in/xiku/ilu/social/rinku.js';
 
-// socialRenderer.js - Render social links
 export function renderSocialLinks(data) {
   const container = document.getElementById('social');
   if (!container) return;
@@ -26,7 +24,7 @@ export function renderSocialLinks(data) {
 
     // If <a prem='sinu'> is available, use it and update its attributes
     if (isSinuAvailable) {
-      link = sinuElement.cloneNode(true); // Clone the element to reuse
+      link = sinuElement.cloneNode(true);
       link.href = urlPatterns[platform](username);
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
@@ -35,22 +33,20 @@ export function renderSocialLinks(data) {
       // Update the inner <i> element if it exists
       const iconElement = link.querySelector('i[linu="icon"]');
       if (iconElement) {
-        iconElement.className = icon[platform] || '🔗';
-        // If icon is a font-awesome class, set it properly
-        if (icon[platform] && icon[platform].includes('fa-')) {
-          iconElement.className = icon[platform];
+        const iconClass = icon[platform] || '';
+        if (iconClass) {
+          iconElement.className = iconClass;
         } else {
-          iconElement.textContent = icon[platform] || '🔗';
+          iconElement.textContent = '🔗';
         }
       } else {
-        // If no i element, set the content directly
-        const iconHtml = icon[platform] || '🔗';
+        // If no i element, create content
+        const iconClass = icon[platform] || '';
         const displayName = displayNames[platform] || platform;
-        if (iconHtml.includes('fa-')) {
-          // If it's a font-awesome icon, use it as class
-          link.innerHTML = `<i class="${iconHtml}"></i> ${displayName}`;
+        if (iconClass) {
+          link.innerHTML = `<i class="${iconClass}"></i> ${displayName}`;
         } else {
-          link.innerHTML = `${iconHtml} ${displayName}`;
+          link.innerHTML = `🔗 ${displayName}`;
         }
       }
     } else {
@@ -61,14 +57,13 @@ export function renderSocialLinks(data) {
       link.rel = 'noopener noreferrer';
       link.className = `social-link platform-${platform}`;
       
-      const iconHtml = icon[platform] || '🔗';
+      const iconClass = icon[platform] || '';
       const displayName = displayNames[platform] || platform;
       
-      if (iconHtml.includes('fa-')) {
-        // If it's a font-awesome icon, use it as class
-        link.innerHTML = `<i class="${iconHtml}"></i> ${displayName}`;
+      if (iconClass) {
+        link.innerHTML = `<i class="${iconClass}"></i> ${displayName}`;
       } else {
-        link.innerHTML = `${iconHtml} ${displayName}`;
+        link.innerHTML = `🔗 ${displayName}`;
       }
     }
 
