@@ -17,20 +17,12 @@ export const SOCIAL_CONFIG = {
     linkedin: 'LinkedIn',
     github: 'GitHub'
   },
-  iconClass: {
-    youtube: "fa-brands fa-youtube",
-    instagram: "fa-brands fa-instagram",
-    facebook: "fa-brands fa-facebook",
-    twitter: "fa-brands fa-x-twitter",
-    linkedin: "fa-brands fa-linkedin",
-    github: "fa-brands fa-github"
-  },
-icons: {
-    youtube: '▶️',
-    instagram: '📷',
-    facebook: '👍',
-    twitter: '🐦',
-    linkedin: '💼',
-    github: '🐙'
-  }
+  icon= {
+  youtube: "fa-brands fa-youtube" : '▶️',
+  instagram:"fa-brands fa-instagram" : '📷',
+  facebook: "fa-brands fa-facebook" : '📘',
+  twitter: "fa-brands fa-x-twitter" : '🕊️',
+  linkedin: "fa-brands fa-linkedin" : '💼',
+  github: "fa-brands fa-github" : '🐈'
+}
 };
