@@ -1,4 +1,4 @@
-// config.js - Configuration constants
+// rinku.js - Fixed
 export const SOCIAL_CONFIG = {
   urlPatterns: {
     youtube: (u) => `https://youtube.com/@${u}`,
@@ -17,12 +17,12 @@ export const SOCIAL_CONFIG = {
     linkedin: 'LinkedIn',
     github: 'GitHub'
   },
-  icon= {
-  youtube: "fa-brands fa-youtube" : '▶️',
-  instagram:"fa-brands fa-instagram" : '📷',
-  facebook: "fa-brands fa-facebook" : '📘',
-  twitter: "fa-brands fa-x-twitter" : '🕊️',
-  linkedin: "fa-brands fa-linkedin" : '💼',
-  github: "fa-brands fa-github" : '🐈'
-}
+  icon: {  // Fixed: Changed '=' to ':'
+    youtube: "fa-brands fa-youtube",
+    instagram: "fa-brands fa-instagram",
+    facebook: "fa-brands fa-facebook",
+    twitter: "fa-brands fa-x-twitter",
+    linkedin: "fa-brands fa-linkedin",
+    github: "fa-brands fa-github"
+  }
 };
