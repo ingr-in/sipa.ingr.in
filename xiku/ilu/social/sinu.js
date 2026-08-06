@@ -1,5 +1,9 @@
 // main.js - Main entry point
-const baseUrl = 'https://www.sipa.ingr.in/xiku/ilu/social';
+
+const iS=`https://www.sipa.ingr.in/xiku/ilu/social`;
+import { loadSocialLinks } from '${iS}/janvikantumae.js';
+import { renderSocialLinks } from '${iS}/jgpri.js';
+import { updateYear } from '${iS}/varsha.js';
 
 (async function() {
   "use strict";
@@ -9,18 +13,11 @@ const baseUrl = 'https://www.sipa.ingr.in/xiku/ilu/social';
 
   document.addEventListener('DOMContentLoaded', async () => {
     try {
-      // Dynamic imports with proper error handling
-      const [{ loadSocialLinks }, { renderSocialLinks }, { updateYear }] = await Promise.all([
-        import(`${baseUrl}/janvikantumae.js`),
-        import(`${baseUrl}/jgpri.js`),
-        import(`${baseUrl}/varsha.js`)
-      ]);
-
       const data = await loadSocialLinks(sinuElem, dataFile);
       renderSocialLinks(data);
       updateYear();
     } catch (error) {
-      console.error('Failed to load modules or initialize:', error);
+      console.error('Failed to initialize:', error);
     }
   });
 
