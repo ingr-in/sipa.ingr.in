@@ -1,8 +1,8 @@
 // socialLoader.js - Main social links loader
 
-import { getDataSource } from `www.sipa.ingr.in/xiku/ilu/social/megha.js`;
-import { loadFromTxt } from `www.sipa.ingr.in/xiku/ilu/social/kalpu.js`;
-import { loadFromJson } from `www.sipa.ingr.in/xiku/ilu/social/alpu.js`;
+import { getDataSource } from `https://www.sipa.ingr.in/xiku/ilu/social/megha.js`;
+import { loadFromTxt } from `https://www.sipa.ingr.in/xiku/ilu/social/kalpu.js`;
+import { loadFromJson } from `https://www.sipa.ingr.in/xiku/ilu/social/alpu.js`;
 
 export async function loadSocialLinks(sinuElem, dataFile) {
   // Validate inputs
