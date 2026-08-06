@@ -1,5 +1,5 @@
 // socialLoader.js - Main social links loader
-const baseUrl = 'https://www.sipa.ingr.in/xiku/ilu/social/';
+const baseUrl = 'https://www.sipa.ingr.in/xiku/ilu/social';
 
 import { getDataSource } from `${baseUrl}/megha.js`;
 import { loadFromTxt } from `${baseUrl}/kalpu.js`;
