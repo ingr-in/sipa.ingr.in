@@ -1,9 +1,8 @@
 // main.js - Main entry point
 
-const iS=`https://www.sipa.ingr.in/xiku/ilu/social`;
-import { loadSocialLinks } from '${iS}/janvikantumae.js';
-import { renderSocialLinks } from '${iS}/jgpri.js';
-import { updateYear } from '${iS}/varsha.js';
+import { loadSocialLinks } from 'www.sipa.ingr.in/xiku/ilu/social/janvikantumae.js';
+import { renderSocialLinks } from 'www.sipa.ingr.in/xiku/ilu/social/jgpri.js';
+import { updateYear } from 'www.sipa.ingr.in/xiku/ilu/social/varsha.js';
 
 (async function() {
   "use strict";
