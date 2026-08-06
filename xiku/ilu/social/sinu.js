@@ -1,8 +1,8 @@
 // main.js - Main entry point
 
-import { loadSocialLinks } from 'www.sipa.ingr.in/xiku/ilu/social/janvikantumae.js';
-import { renderSocialLinks } from 'www.sipa.ingr.in/xiku/ilu/social/jgpri.js';
-import { updateYear } from 'www.sipa.ingr.in/xiku/ilu/social/varsha.js';
+import { loadSocialLinks } from 'https://www.sipa.ingr.in/xiku/ilu/social/janvikantumae.js';
+import { renderSocialLinks } from 'https://www.sipa.ingr.in/xiku/ilu/social/jgpri.js';
+import { updateYear } from 'https://www.sipa.ingr.in/xiku/ilu/social/varsha.js';
 
 (async function() {
   "use strict";
